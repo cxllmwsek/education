@@ -1,11 +1,12 @@
 from flask import render_template
-from main import bp
+from flask_login import login_required
+from . import bp
 
 @bp.route('/')
 def index():
-    # เปลี่ยนจากการคืนค่าสตริงเป็นการเรนเดอร์ index.html
     return render_template('index.html')
 
 @bp.route('/dashboard')
+@login_required # เพิ่ม: ต้องล็อกอินก่อน
 def dashboard():
-    return "User Dashboard (Protected Page)"
+    return render_template('dashboard.html')

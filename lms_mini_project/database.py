@@ -33,6 +33,9 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'<User {self.username} ({self.role})>'
+    def is_teacher(self):
+        # Teacher หรือ Admin สามารถสร้างคอร์สได้
+        return self.role in ['teacher', 'admin']
 
 class Course(db.Model):
     __tablename__ = 'courses'
