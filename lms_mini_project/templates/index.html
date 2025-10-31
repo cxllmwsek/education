@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}หน้าแรก - LMS Mini{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <h1>ยินดีต้อนรับสู่ ระบบจัดการเรียนรู้ขนาดเล็ก</h1>
+        <p>เริ่มต้นการเรียนรู้หรือการสอนคอร์สใหม่ได้ทันที</p>
+        <a href="{{ url_for('auth.register') }}" class="btn primary">เริ่มเรียนรู้ฟรี!</a>
+    </section>
+    
+    <section class="course-summary">
+        <h2>คอร์สแนะนำ</h2>
+        <p>เนื้อหานี้จะแสดงคอร์สที่มีในระบบ (จะสร้างในขั้นตอนต่อไป)</p>
+    </section>
+{% endblock %}

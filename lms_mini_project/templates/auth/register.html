@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}ลงทะเบียน{% endblock %}
+
+{% block content %}
+    <section class="auth-container">
+        <h2>ลงทะเบียนผู้ใช้ใหม่</h2>
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="username">ชื่อผู้ใช้:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">ยืนยันรหัสผ่าน:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            
+            <input type="hidden" name="role" value="student"> 
+
+            <button type="submit" class="btn primary">ลงทะเบียน</button>
+        </form>
+        <p>มีบัญชีอยู่แล้ว? <a href="{{ url_for('auth.login') }}">เข้าสู่ระบบ</a></p>
+    </section>
+{% endblock %}

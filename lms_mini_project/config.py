@@ -1,6 +1,6 @@
 import os
 
-# หาพาธของโฟลเดอร์รากโปรเจ็ค (ที่ config.py อยู่)
+# หาพาธของโฟลเดอร์รากโปรเจ็ค (lms_mini_project)
 basedir = os.path.abspath(os.path.dirname(__file__))
 instance_path = os.path.join(basedir, 'instance')
 
@@ -9,7 +9,6 @@ if not os.path.exists(instance_path):
     os.makedirs(instance_path)
 
 class Config:
-    # SECRET_KEY ใช้สำหรับเข้ารหัสเซสชัน
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess-this-secret'
     
     # กำหนดพาธฐานข้อมูลแบบเต็ม

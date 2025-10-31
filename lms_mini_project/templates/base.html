@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LMS Mini Project{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('main.index') }}" class="logo">🚀 LMS Mini</a>
+            <div>
+                <a href="{{ url_for('auth.login') }}">เข้าสู่ระบบ</a>
+                <a href="{{ url_for('auth.register') }}">ลงทะเบียน</a>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LMS Mini Project. Powered by Flask.</p>
+    </footer>
+</body>
+</html>
