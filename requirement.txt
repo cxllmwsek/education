@@ -1,0 +1,3 @@
+Flask --Core framework.
+Flask-SQLAlchemy --Extension สำหรับจัดการฐานข้อมูลกับ SQLAlchemy (ORM)
+Flask-Login --Extension สำหรับจัดการเซสชันผู้ใช้ (Login/Logout).
